@@ -1,11 +1,15 @@
 {% extends '_base.html' %}
 
-{% block title %}Projects{% endblock title %}
+{% block title %}Projects looking for KodePal's{% endblock title %}
 
 {% block content %}
     {% for project in project_list %}
-    <div>
+
         <h2><a href="{{ project.get_absolute_url }}">{{ project.title }}</a></h2>
+        <div class="card-footer text-center text-muted">
+        <a href="#">Edit</a> | <a href="#">Delete</a>
+      </div>
     </div>
+    <br />
     {% endfor %}
 {% endblock content %}

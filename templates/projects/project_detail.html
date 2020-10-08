@@ -4,9 +4,6 @@
 
 {% block content %}
     <div class="project-detail">
-        {% if project.cover %}
-        <img class="projectcover" src="{{ project.cover.url }}" alt="{{ project.title }}">
-        {% endif %}
         <h2><a href="">{{ project.title }}</a></h2>
         <p>Author: {{ project.author }}</p>
         <p>Description: {{ project.description }}</p>
@@ -20,4 +17,6 @@
             </ul>
         </div>
     </div>
+    <p><a href="{% url 'project_edit' project.pk %}">Edit your Project</a></p>
+    <p>Back to <a href="{% url 'project_list' %}">All projects</a></p>
 {% endblock content %}
