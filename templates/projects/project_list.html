@@ -6,10 +6,11 @@
     {% for project in project_list %}
 
         <h2><a href="{{ project.get_absolute_url }}">{{ project.title }}</a></h2>
-        <div class="card-footer text-center text-muted">
+        <p class="card-footer text-left text-muted">
         <a href="#">Edit</a> | <a href="#">Delete</a>
+
       </div>
-    </div>
+
     <br />
     {% endfor %}
 {% endblock content %}

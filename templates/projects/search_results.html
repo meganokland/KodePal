@@ -6,6 +6,7 @@
     <h1>Search Results</h1>
     {% for project in project_list %}
     <div>
+
         <h3><a href="{{ project.get_absolute_url }}">{{ project.title }}</a></h3>
         <p>Author: {{ project.author }}</p>
         <p>Description: {{ project.description }}</p>

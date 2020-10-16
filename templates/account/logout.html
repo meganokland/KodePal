@@ -9,8 +9,9 @@
     <p>Hope to see you again soon!</p>
     <p>Don't forget "make today great or not, the choice is yours"</p>
     <form method="post" action="{% url 'account_logout' %}">
+    <!--form method="post" action="{$ url 'account_signup' %}"> -->
         {% csrf_token %}
         {{ form|crispy }}
-        <!--<button class = "btn btn-danger" type="submit">Log Out</button> -->
+        <button class = "btn btn-danger" type="submit">Log Out</button>
     </form>
 {% endblock content %}
