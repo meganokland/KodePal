@@ -1,0 +1,15 @@
+{% extends '_base.html' %}
+
+{% block title %}{{ profile.first_name }}{% endblock title %}
+
+{% block content %}
+    <div class="profile-detail">
+    {% if profile.profile_images %}
+    <img class="profile_images" src="{{ profile.profile_images.url }}" alt="{{ profile.first_name }}">
+    {% endif %}
+        <h2><a href="">{{ profile.get_absolute_url}}</a></h2>
+        <p>First_name: {{ profile.first_name }}</p>
+        <p>Description: {{ profile.description }}</p>
+
+        </div>
+{% endblock content %}
